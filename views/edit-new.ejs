@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Drag and Drop Sample</title>
+	<link rel="stylesheet" href="/css/edit.css">
+	<script type="text/javascript" src="/js/fabric.min.js"></script>
+	<script type="text/javascript" src="/js/edit-tag.js"></script>
+	<script type="text/javascript" src="/js/layer.js"></script>
+	<script type="text/javascript" src="/js/testJson.js"></script>
+</head>
+<body>
+	<header>
+	</header>
+
+	<input id="title-box" type="text" value="新しいプロジェクト">
+	<div class="contents-wrapper">
+		<div id="canvas-wrapper">
+			<canvas id="cv"></canvas>
+		</div>
+		<div id="prop-wrapper">
+			<span>アイコン：</span>
+			<input type="text" id="name" oninput="setIconName()"/>
+			<input type="color" id="color" value="#c3d9ff" onchange="setIconColor()"/>
+
+			<div id="layer">
+				<button type="button" id="l1" onclick="changeLayer(this.textContent)">1</button>
+			</div>
+			<div>
+				<span>レイヤー：</span>
+				<span id="layerNumber">1</span>
+				<button type="button" id="addLayerBtn" onclick="addLayer()">+</button>
+				<button type="button" id="deleteLayerBtn" onclick="deleteLayer()">-</button>
+			</div>
+			
+
+			<input class="button" type="button" id="btn1" value= "追加" onclick="addIcon(id);" />
+			<input class="button" type="button" id="btn4" value= "削除" onclick="deleteIcon()" />
+			<input class="button" type="button" id="animateBtn" value= "アニメーション" onclick="simulate()" />
+			<input class="button" type="button" id="btn3" value= "インポート" onclick="alert(JSON.stringify(fb));" />
+			<input class="button" type="button" id="btn5" value= "エクスポート" onclick="jsonOutput()" />
+		</div>
+	</div>
+	<div class="json-wrapper">
+		<div id="jsontxt"></div>
+	</div>
+
+	<footer>
+	</footer>
+
+	<script type="text/javascript" src="/js/canvas.js"></script>
+</body>
+</html>

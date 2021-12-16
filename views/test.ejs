@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Drag and Drop Sample</title>
+	<link rel="stylesheet" href="/css/edit.css">
+	<script type="text/javascript" src="/js/fabric.min.js"></script>
+	<script type="text/javascript" src="/js/edit-tag.js"></script>
+	<script type="text/javascript" src="/js/layer.js"></script>
+</head>
+<body>
+    <div class="contents-wrapper">
+		<div id="canvas-wrapper">
+			<canvas id="cv"></canvas>
+		</div>
+		<div id="prop-wrapper">
+			<input type="text" id="name" onchange=""/>
+			<input type="color" id="color" onchange=""/>
+
+			<div id="layer">
+				<button type="button" id="l1" onclick="changeLayer(this.textContent)">1</button>
+			</div>
+			<button type="button" id="addLayerBtn" onclick="addLayer()">+</button>
+			<button type="button" id="deleteLayerBtn" onclick="deleteLayer()">-</button>
+			<span>レイヤー：</span>
+			<span id="layerNumber">1</span>
+			<input class="button" type="button" id="animateBtn" value= "アニメーション" onclick="simulate()" />
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="/js/test.js"></script>
+</body>
+</html>
